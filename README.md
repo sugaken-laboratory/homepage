@@ -1,6 +1,6 @@
 # 菅原研究室 Webサイト
 
-東北学院大学 菅原研究室のWebサイト制作を担当しました。
+東北学院大学 菅原研究室のWebサイトを制作しました。
 
 研究室訪問を検討する学生に向けて、研究内容やメンバー、活動内容などを紹介することを目的として制作しています。
 
@@ -12,7 +12,7 @@
 
 ## Website
 
-[🌐 菅原研究室 Webサイト](https://sugaken-laboratory.github.io/homepage/)
+[菅原研究室 Webサイト](https://sugaken-laboratory.github.io/homepage/)
 
 ## Web Site Design & Development
 
