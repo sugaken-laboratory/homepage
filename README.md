@@ -16,6 +16,6 @@
 [🌐 菅原研究室 Webサイト](https://sugaken-laboratory.github.io/homepage/)
 
 ## Web Site Design & Development
-Tanno Momona
+Tanno Momona  
 [Tanno MomonaのGitHub](https://github.com/240713036)
 デザインからHTML / CSS / JavaScriptによる実装まで制作しました。
