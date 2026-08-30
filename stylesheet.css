@@ -559,11 +559,11 @@ h3{
 }
 
 .sec-container:nth-of-type(odd) {
-  background-color: #ffffff;
+  background-color: #f7f8f5;
 }
 
 .sec-container:nth-of-type(even) {
-  background-color: #f7f8f5;
+  background-color: #ffffff;
 }
 
 
