@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>研究概要｜菅原研究室｜東北学院大学 情報学部</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="subpage-style.css"><meta name="description" content="東北学院大学 情報学部 菅原研究室の研究概要。群知能、群ロボット、ロボット制御、プロジェクタ応用などの研究分野や研究事例を紹介しています。">
+</head>
+
+<body id="research">
+<div class="page-reserches">
+<header>
+  <a href="./index.html">
+    <img class="logo-min" src="img/logo.png" alt="菅原研究室">
+  </a>
+
+  <!-- ハンバーガーボタン -->
+  <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul class="menu">
+
+      <li>
+        <a href="./index.html">ホーム</a>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="./research.html" class="current">研究概要</a>
+
+        <ul class="dropdown">
+          <li><a href="./researches/swarm-robotics.html">群ロボット</a></li>
+          <li><a href="./researches/body-system.html">体を動かすシステム</a></li>
+          <li><a href="./researches/projector.html">プロジェクタ応用システム</a></li>
+          <li><a href="./researches/education.html">教育システム</a></li>
+          <li><a href="./researches/seminar.html">情報学演習</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./news.html">ニュース</a>
+      </li>
+
+      <li>
+        <a href="./member.html">メンバー</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('active');
+
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+<main>
+ <div class="hero">
+    <!-- HERO -->
+    <div class="hero-inner">
+
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1 class="hero-title">研究概要</h1>
+        <p class="hero-en">Our Researches</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <img src="./img/sub-swarm.png" alt="複数のロボットが協調して動く群ロボット">
+          <div class="gradation"></div>
+        </div>
+
+      </div>
+
+    </div>
+ </div>
+
+<section class="sec-ovv-01">
+  <div class="res-container">
+      <h3 class="res-ovv-head">
+        <span class="res-ovv-num">01</span>
+        <span class="res-ovv-sub">基本姿勢</span>
+      </h3>
+    <div class="flex-invalid-768 res-ovv-flexed">
+    <div class="res-ovv-des">
+      <h2 class="res-ovv-head">コンピュータに<br>
+        「センサをつける」<br>「手足をつける」</h2>
+      <p>実体を持つ、物理的な接触ができる。
+        ハードウェアに興味がある人は特に楽しめるはず。
+      </p>
+    </div>
+    <div class="res-ovv-img flex-valid-768 flex-invalid-480">
+      <div class="icon-inner">
+          <img src="img/icon-wifi.png" class="ovv-icon" alt="センサのアイコンimg">
+          <p class="icon-des"><span class="icon-des-head">センサをつける<br></span>
+            周囲の状況を感じ取り、コンピュータへ情報を渡す。</p>
+      </div>
+      <div class="icon-inner">
+      <img src="img/icon-robarm.png" class="ovv-icon" alt="ロボットアームのアイコン">
+        <p class="icon-des"><span class="icon-des-head">手足をつける<br></span>
+          画像処理に基づいてロボットを制御し、周囲に働きかける。</p>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="res-container">
+      <h3 class="res-ovv-head">
+        <span class="res-ovv-num">02</span>
+        <span class="res-ovv-sub">Keyword</span>
+      </h3>
+    <div class="flex-invalid-768 res-ovv-flexed">
+    <div class="res-ovv-des">
+      <h2 class="res-ovv-head">群知能</h2>
+      <p>単純な個体の集団が、個体同士あるいは個体と環境の間でお互いに影響し合って、単なる総和以上の機能が出てくることを「群知能」と呼ぶ。<br>
+        ときに優秀でない個体が混ざることで良い結果を生んだり、それぞれの利己的な行動が結果的に助け合いのような現象を起こしたりする。
+      </p>
+    <div class="icon-inner">
+      <div class="res-ovv-img flex-valid-768 flex-invalid-480"><div>
+          <img src="img/icon-ai.png" class="ovv-icon" alt="人工知能を表すアイコン">
+          <p class="icon-des"><span class="icon-des-head">人工知能<br></span>
+            個体の知能を高めることで<br>「賢い判断」を狙う技術
+          </p>
+        </div>
+        <div class="icon-inner">
+          <img src="img/icon-swarn-intelligence.png" class="ovv-icon" alt="群知能を表すアイコン">
+            <p class="icon-des"><span class="icon-des-head">群知能<br></span>
+              個体の知能は高めず、<br>集団での「賢い判断」を狙う技術
+            </p>
+        </div>
+      </div>
+    </div>
+  </div></div></div>
+
+  <div class="res-container">
+    <div class="res-ovv-des">
+      <h3 class="res-ovv-head">
+        <span class="res-ovv-num">03</span>
+      </h3>
+      <h2 class="res-ovv-head">研究分野（卒業研究）</h2>
+      <p>プロジェクション、群れ、ロボットの3つの視点から、<br>
+        さまざまなテーマに取り組んでいる。
+      </p>
+    </div>
+  <div class="res-ovv-fig">
+    <img class="res-ovv-fig-inner res-field" src="img/res-field.png" alt="研究分野ベン図">
+  </div>
+  </div>
+
+<div class="res-container">
+    <div class="res-ovv-des">
+      <h3 class="res-ovv-head">
+        <span class="res-ovv-num">04</span>
+        <span class="res-ovv-sub">Pickup</span>
+      </h3>
+      <h2 class="res-ovv-head">研究事例</h2>
+    </div>
+
+    <div class="grid">
+      <a href="./researches/swarm-robotics.html#kutuhakobi" class="res-card">
+        <div class="res-image">
+          <img src="img/index-research-swarm.png" alt="複数のロボットが協力して靴を運ぶ群ロボット">
+        </div>
+        <h4 class="res-ex">
+          みんなで運ぶロボット1<br>（協力している“ようにみえる”）
+        </h4>
+        <p class="tag-container"><span class="tag">
+          #群れ
+        </span></p>
+        <p class="tag-container"><span class="tag">
+          #ロボット
+        </span></p>
+      </a>
+
+      <a href="./researches/swarm-robotics.html#sonsitsu" class="res-card">
+        <div class="res-image">
+          <img src="img/sub/sonsitu.png" alt="損失を活かす群ロボット">
+        </div>
+        <h4 class="res-ex">
+          損失を活かすロボット
+        </h4>
+        <p class="tag-container"><span class="tag">
+          #群れ
+        </span></p>
+        <p class="tag-container"><span class="tag">
+          #ロボット
+        </span></p>
+      </a>
+
+      <a href="researches/body-system.html#undou" class="res-card">
+        <div class="res-image">
+          <img src="img/sub/exer.png" alt="家庭用運動器具とロボットを組み合わせたエクササイズシステム">
+        </div>
+        <h4 class="res-ex">
+          家庭用運動器具を用いた運動不足解消支援システム
+        </h4>
+        <p class="tag-container"><span class="tag">
+          #プロジェクション
+        </span></p>
+        <p class="tag-container"><span class="tag">
+          #ロボット
+        </span></p>
+      </a>
+
+      <a href="researches/projector.html#nendo" class="res-card">
+        <div class="res-image">
+          <img src="img/index-research-projector.png" alt="プロジェクタを使って粘土細工と遊ぶインタラクティブシステム">
+        </div>
+        <h4 class="res-ex">
+          粘土細工とあそぶ
+        </h4>
+        <p class="tag-container"><span class="tag">
+          #群れ
+        </span></p>
+        <p class="tag-container"><span class="tag">
+          #プロジェクション
+        </span></p>
+      </a>
+
+      <a href="researches/education.html" class="res-card">
+        <div class="res-image">
+          <img src="img/index-research-sikaku.png" alt="視覚障がいのある児童を対象としたプログラミング教育システム">
+        </div>
+        <h4 class="res-ex">
+          視覚障がいをもつ児童のためのプログラミング教育システム
+        </h4>
+        <p class="tag-container"><span class="tag">
+          #ロボット
+        </span></p>
+      </a>
+
+      <a href="researches/body-system.html#hinitijou" class="res-card">
+        <div class="res-image">
+          <img src="img/index-research-body-system.png" alt="日常を非日常に変えて楽しむためのロボット">
+        </div>
+        <h4 class="res-ex">
+          日常を非日常に変えて楽しむためのロボット
+        </h4>
+        <p class="tag-container"><span class="tag">
+          #ロボット
+        </span></p>
+      </a>
+
+      </div>
+    </div>
+</section>
+  </main>
+
+
+<footer>
+  <p class="f-home"><a href="./index.html">菅原研究室｜東北学院大学</a></p>
+  <div class="f-grid">
+    <div class="f-index">
+      <p><a href="./index.html">トップページ</a></p>
+      <p><a href="./index.html#tag-about">About</a></p>
+      <p><a href="./index.html#tag-news">News</a></p>
+      <p><a href="./index.html#tag-research">Research</a></p>
+      <p><a href="./index.html#tag-member">Member</a></p>
+      <p><a href="./index.html#tag-contact">Contact</a></p>
+    </div>
+    <div class="f-research">
+      <p><a href="research.html">研究概要</a></p>
+      <p><a href="researches/swarm-robotics.html">群ロボット</a></p>
+      <p><a href="researches/body-system.html">体を動かすシステム</a></p>
+      <p><a href="researches/projector.html">プロジェクタ応用システム</a></p>
+      <p><a href="researches/education.html">教育システム</a></p>
+      <p><a href="researches/seminar.html">情報学演習</a></p>
+    </div>
+    <div class="f-member">
+      <p><a href="news.html">ニュース一覧</a></p>
+      <p><a href="member.html">メンバー</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

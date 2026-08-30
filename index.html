@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>菅原研究室 | 東北学院大学 情報学部</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description" content="東北学院大学 情報学部の菅原研究室。群ロボット、ロボット制御、プロジェクタ応用など、コンピュータと実世界をつなぐ研究に取り組んでいます。">
+</head>
+
+<body id="index">
+<div class="page-index">
+<header>
+  <a href="./index.html">
+    <img class="logo-min" src="img/logo.png" alt="菅原研究室">
+  </a>
+
+  <!-- ハンバーガーボタン -->
+  <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul class="menu">
+
+      <li>
+        <a href="./index.html" class="current">ホーム</a>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="./research.html">研究概要</a>
+
+        <ul class="dropdown">
+          <li><a href="./researches/swarm-robotics.html">群ロボット</a></li>
+          <li><a href="./researches/body-system.html">体を動かすシステム</a></li>
+          <li><a href="./researches/projector.html">プロジェクタ応用システム</a></li>
+          <li><a href="./researches/education.html">教育システム</a></li>
+          <li><a href="./researches/seminar.html">情報学演習</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./news.html">ニュース</a>
+      </li>
+
+      <li>
+        <a href="./member.html">メンバー</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen=nav.classList.toggle('active');
+
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+
+
+<main>
+
+ <section class="hero">
+  <svg class="curve-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 200" width="100%">
+  <defs>
+    <linearGradient id="wave-1779946242188" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="200">
+      <stop offset="20%" stop-color="#becd7b80"/>
+      <stop offset="40%" stop-color="#a7cd7ba6"/>
+      <stop offset="60%" stop-color="#96cd7bd9"/>
+      <stop offset="80%" stop-color="#8ccd7bf2"/>
+      <stop offset="100%" stop-color="#7bcd7f"/>
+    </linearGradient>
+  </defs>
+  <path d="M 0 200 Q 640 200 1280 0 Q 1920 200 2560 200 Q 3200 200 3840 0 Q 4480 200 5120 200 L 1280 200 L 0 200 Z" fill="url(#wave-1779946242188)"></path>
+</svg>
+    <!-- HERO -->
+    <div class="hero-inner">
+
+
+      <!-- LEFT -->
+      <div class="hero-text" id="hero-index-text">
+
+
+        <h2 class="hero-copy">画面の中で終わらない。</h2>
+        <h2 class="hero-sub">動くものをみて、かんがえて、つくる研究室</h2>
+        <h1 id="index-hero-title">菅原研究室</h1>
+
+        <p id="index-hero-en">Sugawara Ken Lab</p>
+
+        <a href="./research.html" class="hero-btn">
+          研究概要を見る<span>→</span>
+        </a>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <img src="./img/characteristics01.jpg" alt="菅原研究室の研究風景">
+          <div class="gradation"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCROLL -->
+    <div class="scroll">
+
+      <div class="scroll-circle">
+        Scroll
+      </div>
+
+      <div class="scroll-line"></div>
+
+    </div>
+<svg class="curve-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 200" width="100%">
+  <defs>
+    <linearGradient id="wave-1779946242188" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="200">
+      <stop offset="20%" stop-color="#becd7b80"/>
+      <stop offset="40%" stop-color="#a7cd7ba6"/>
+      <stop offset="60%" stop-color="#96cd7bd9"/>
+      <stop offset="80%" stop-color="#8ccd7bf2"/>
+      <stop offset="100%" stop-color="#7bcd7f"/>
+    </linearGradient>
+  </defs>
+  <path d="M 0 200 Q 640 200 1280 0 Q 1920 200 2560 200 Q 3200 200 3840 0 Q 4480 200 5120 200 L 1280 200 L 0 200 Z" fill="url(#wave-1779946242188)"></path>
+</svg>
+</section>
+
+
+
+
+  <section class="intro" id="tag-about">
+      <div class="intro-container">
+        <div class="intro-text">
+        <h3 class="intro-head">About</h3>
+        <p>
+          東北学院大学 菅原研究室は、<wbr>コンピューターの中だけで終わらない、<wbr>センサをつけたりモーターをつけたりしながら<wbr>コンピュータの扱いを楽しむゼミ。<br>
+          画像情報に基づいたロボットの制御に関する研究を主として、<wbr>プロジェクション・群れ・ロボットの分野を中心に<wbr>総合研究を行っている。
+        </p>
+        </div>
+      </div>
+  </section>
+
+  <div class="sec-container" id="tag-news">
+  <section class="sec-news">
+    <h3 class="news-head">News</h3>
+    <script src="news.js"></script>
+    <div id="latest-news"></div>
+    <p class="news-page-link"><a href="./news.html">ニュース一覧</a></p>
+<script>
+  const container = document.getElementById("latest-news");
+
+  [...newsList]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 3)
+    .forEach(news => {
+      const div=document.createElement("div");
+      div.classList.add("news-list");
+
+      // リンクがある場合
+      if (news.link) {
+        div.innerHTML=`
+          <a href="${news.link}" target="_blank" rel="noopener noreferrer" class="news-link">
+            <span class="news-date">${news.date}<br></span>
+            <span class="news-title">${news.title}</span>
+          </a>
+        `;
+      }
+      // リンクがない場合
+      else {
+        div.innerHTML=`
+          <span class="news-no-link">
+            <span class="news-date">${news.date}<br></span>
+            <span class="news-title">${news.title}</span>
+          </span>
+        `;
+      }
+
+      container.appendChild(div);
+    });
+</script>
+  </section>
+  </div>
+
+  <div class="sec-container" id="tag-research">
+  <section class="sec-research">
+    <div class="sec-container-research">
+    <h2 class="res-head">Research</h2>
+
+    <div class="grid">
+    <a href="./researches/swarm-robotics.html" class="res-card">
+      <div class="res-image">
+        <img src="img/index-research-swarm.png" alt="複数のロボットが協調して動く群ロボットの研究（くつはこびロボット）">
+      </div>
+      <h4 class="res-genre">
+        <span class="res-number">01 <br></span>
+        群ロボット
+      </h4>
+      <p class="res-description">
+        「たくさんいる」を活かす、複数台で1つの仕事をするロボット。<br>
+        一般的には互いが助け合うが、一部を犠牲にしたり利己的な行動が結果的に助け合いになったりする考え方もある。
+      </p>
+      <p class="tag-container"><span class="tag">
+        #群知能ロボット
+      </span></p>
+    </a>
+
+    <a href="researches/body-system.html" class="res-card">
+      <div class="res-image">
+        <img src="img/index-research-body-system.png" alt="カメラを搭載した小型ロボットを操作する体を動かすシステム"">
+      </div>
+      <h4 class="res-genre">
+        <span class="res-number">02 <br></span>
+        体を動かす<wbr>システム
+      </h4>
+      <p class="res-description">
+        小型ロボットに取り付けられたカメラから世界を見てみるシステム。<br>
+        足踏みや首振りと連動して動くロボットを操作して、遊びやエクササイズができる。
+      </p>
+      <p class="tag-container"><span class="tag">
+        #単体ロボット
+      </span></p>
+      <p class="tag-container"><span class="tag">
+        #エクサゲーム
+      </span></p>
+    </a>
+
+    <a href="researches/projector.html" class="res-card">
+      <div class="res-image">
+        <img src="img/index-research-projector.png" alt="プロジェクタを利用したインタラクティブシステムの研究">
+      </div>
+      <h4 class="res-genre">
+        <span class="res-number">03 <br></span>
+        プロジェクタ<wbr>応用<wbr>システム
+      </h4>
+      <p class="res-description">
+        インタラクティブなプロジェクタを制御するシステム。<br>
+        粘土を利用したり動きに反応するプログラムを利用したりして、「つくる楽しさ」と「動かす楽しさ」を考える。
+      </p>
+      <p class="tag-container"><span class="tag">
+        #プロジェクタ応用
+      </span></p>
+    </a>
+
+    <a href="researches/education.html" class="res-card">
+      <div class="res-image">
+        <img src="img/index-research-sikaku.png" alt="ロボットを活用した子どもの学習を支援する教育システム">
+      </div>
+      <h4 class="res-genre">
+        <span class="res-number">04 <br></span>
+        教育システム
+      </h4>
+      <p class="res-description">
+        ロボットを使って子どもの学習を手助けするシステム。<br>
+        視覚障害のある子どものためのプログラミング環境開発や、間違いを訂正させることで学習を支援するロボットの制作を行う。
+      </p>
+      <p class="tag-container"><span class="tag">
+        #視覚障がい児童向け<wbr>プログラミング<wbr>学習システム
+      </span></p>
+    </a>
+
+    <a href="researches/seminar.html" class="res-card">
+      <div class="res-image">
+        <img src="img/sub/ensyuu1.png" alt="情報学演習で使用する教材やシステム">
+      </div>
+      <h4 class="res-genre">
+        <span class="res-number">05 <br></span>
+        情報学演習
+      </h4>
+      <p class="res-description">
+        3年生の演習詳細についてはこちら。<br>
+        プログラミング、データ分析、プレゼンテーションを中心に行っている。
+      </p>
+      <p class="tag-container"><span class="tag">
+        #情報学演習
+      </span></p>
+    </a>
+
+    </div>
+  </div>
+  </section>
+  </div>
+
+  <div class="sec-container" id="tag-member">
+  <section class="sec-member">
+    <div class="sec-container-member">
+    <h2 class="member-head">Member</h2>
+    <div class="member-flexed">
+      <div class="professor-img-box">
+            <img class="professor-img" src="img/professor-img.png" alt="菅原研教授">
+      </div>
+      <div class="member-des-box">
+        <p>菅原研 教授</p>
+        <p>所属：東北学院大学 情報学部 データサイエンス学科</p>
+        <p>専門：自律分散システム</p>
+        <p class="member-desc">
+          菅原研究室は、「うごくもの」を見て、しくみを考え、じっさいにつくる——そんな知的な楽しみを大切にしている研究室です。
+          たとえば、ロボットが協力して動くしくみを考えたり、見えにくさを抱える人のためのツールをつくったり、プロジェクタを使って楽しい空間をデザインしたりしています。<br>
+          うごくものを見て・考えて・つくることに興味がある人、ここでぜひ一緒に楽しみましょう。
+        </p>
+        <div class="tags">
+        <p class="tag-container"><span class="tag">
+          #自律分散システム
+        </span></p>
+        <p class="tag-container"><span class="tag">
+          #群知能ロボット
+        </span></p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  </div>
+
+  <div class="sec-container" id="tag-contact">
+<section class="sec-contact">
+    <div class="sec-container-contact">
+  <h2 class="contact-head">Contact</h2>
+
+  <div class="contact-flexed">
+    <div class="contact-des-box">
+      <p>Email : <br>sugaken(at)mail.tohoku-gakuin.ac.jp</p>
+      <p>Address：<br>
+        〒984-8588　仙台市若林区清水小路3-1<br>
+        東北学院大学 五橋キャンパス<wbr>シュネーダー記念館 7階<br>
+        個人研究室S7H ゼミ室S706<br>
+      </p>
+      <p>Access：<br>
+        JR仙台駅から徒歩約15分<br>
+        地下鉄南北線 五橋駅 直結
+      </p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d329.3404688150777!2d140.88159785527142!3d38.250919663428505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a2908cb9d8591%3A0x2ce1552de36ba8df!2z5p2x5YyX5a2m6Zmi5aSn5a2mIOS6lOapi-OCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1777893538265!5m2!1sja!2sjp" title="東北学院大学 五橋キャンパスの地図" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  </div>
+</section>
+</div>
+</main>
+
+<footer>
+  <p class="f-home"><a href="./index.html">菅原研究室｜東北学院大学</a></p>
+  <div class="f-grid">
+    <div class="f-index">
+      <p><a href="./index.html">トップページ</a></p>
+      <p><a href="#tag-about">About</a></p>
+      <p><a href="#tag-news">News</a></p>
+      <p><a href="#tag-research">Research</a></p>
+      <p><a href="#tag-member">Member</a></p>
+      <p><a href="#tag-contact">Contact</a></p>
+    </div>
+    <div class="f-research">
+      <p><a href="research.html">研究概要</a></p>
+      <p><a href="researches/swarm-robotics.html">群ロボット</a></p>
+      <p><a href="researches/body-system.html">体を動かすシステム</a></p>
+      <p><a href="researches/projector.html">プロジェクタ応用システム</a></p>
+      <p><a href="researches/education.html">教育システム</a></p>
+      <p><a href="researches/seminar.html">情報学演習</a></p>
+    </div>
+    <div class="f-member">
+      <p><a href="news.html">ニュース一覧</a></p>
+      <p><a href="member.html">メンバー</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>メンバー｜菅原研究室｜東北学院大学 情報学部</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="subpage-style.css">
+<meta name="description" content="東北学院大学 情報学部 菅原研究室のメンバー紹介。菅原研教授の所属、学位、専門分野、経歴などを紹介しています。">
+</head>
+
+<body id="member">
+<div class="page-reserches">
+<header>
+  <a href="./index.html">
+    <img class="logo-min" src="img/logo.png" alt="菅原研究室">
+  </a>
+
+  <!-- ハンバーガーボタン -->
+  <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul class="menu">
+
+      <li>
+        <a href="./index.html">ホーム</a>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="./research.html">研究概要</a>
+
+        <ul class="dropdown">
+          <li><a href="./researches/swarm-robotics.html">群ロボット</a></li>
+          <li><a href="./researches/body-system.html">体を動かすシステム</a></li>
+          <li><a href="./researches/projector.html">プロジェクタ応用システム</a></li>
+          <li><a href="./researches/education.html">教育システム</a></li>
+          <li><a href="./researches/seminar.html">情報学演習</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./news.html">ニュース</a>
+      </li>
+
+      <li>
+        <a href="./member.html" class="current">メンバー</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('active');
+
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+<main>
+ <div class="hero">
+    <!-- HERO -->
+    <div class="hero-inner">
+
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1 class="hero-title">メンバー</h1>
+        <p class="hero-en"></p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <img src="./img/sub-swarm.png" alt="複数のロボットが協調して動く群ロボット">
+          <div class="gradation"></div>
+        </div>
+
+      </div>
+
+    </div>
+ </div>
+
+
+<section class="sec-ovv-02">
+  <div class="sec-container-ovv">
+
+    <div>
+    <div class="res-ovv-des">
+  <div class="flex-invalid-768 -flexed">
+    <div class="ress-img-box">
+      <img class="pro-img" src="./img/professor-img.png" alt="菅原研教授">
+    </div>
+    <div>
+      <h3>菅原研 教授</h3>
+
+    <div>
+    <div class="career">
+      <p>所属：東北学院大学 情報学部 データサイエンス学科</p>
+      <p>学位：博士（情報科学）（東北大学）</p>
+      <p>専門：自律分散システム・群知能ロボット</p>
+      <p>経歴：</p>
+      <p>2023.4　東北学院大学, 情報学部 データサイエンス学科, 教授</p>
+      <p>2013.4　東北学院大学教養学部情報科学科, 教授</p>
+      <p>2007.4　東北学院大学教養学部情報科学科, 准教授</p>
+      <p>2004.4　東北学院大学教養学部情報科学科, 助教授</p>
+      <p>1999.4　電気通信大学大学院情報システム学研究科, 助手</p>
+      <p>1997.4　日本学術振興会（東北大学）, 特別研究員</p>
+      <p>Email：sugaken(at)mail.tohoku-gakuin.ac.jp</p>
+    </div>
+      <p></p>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="f-home"><a href="../index.html">菅原研究室｜東北学院大学</a></p>
+  <div class="f-grid">
+    <div class="f-index">
+      <p><a href="../index.html">トップページ</a></p>
+      <p><a href="../index.html#tag-about">About</a></p>
+      <p><a href="../index.html#tag-news">News</a></p>
+      <p><a href="../index.html#tag-research">Research</a></p>
+      <p><a href="../index.html#tag-member">Member</a></p>
+      <p><a href="../index.html">Contact</a></p>
+    </div>
+    <div class="f-research">
+      <p><a href="research.html">研究概要</a></p>
+      <p><a href="researches/swarm-robotics.html">群ロボット</a></p>
+      <p><a href="researches/body-system.html">体を動かすシステム</a></p>
+      <p><a href="researches/projector.html">プロジェクタ応用システム</a></p>
+      <p><a href="researches/education.html">教育システム</a></p>
+      <p><a href="researches/seminar.html">情報学演習</a></p>
+    </div>
+    <div class="f-member">
+      <p><a href="news.html">ニュース一覧</a></p>
+      <p><a href="member.html">メンバー</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

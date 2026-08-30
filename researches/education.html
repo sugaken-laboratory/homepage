@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>教育システム | 菅原研究室 | 東北学院大学 情報学部</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<link rel="stylesheet" href="../subpage-style.css">
+<link rel="stylesheet" href="./researches-style.css">
+<meta name="description" content="東北学院大学 菅原研究室の教育システムに関する研究を紹介。視覚障がいのある児童向けのプログラミング教育システムや、学習を支援するロボットの開発に取り組んでいます。">
+</head>
+
+<body id="index">
+<div class="page-index">
+<header>
+  <a href="./index.html">
+    <img class="logo-min" src="../img/logo.png" alt="菅原研究室">
+  </a>
+
+  <!-- ハンバーガーボタン -->
+  <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul class="menu">
+
+      <li>
+        <a href="../index.html">ホーム</a>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="../research.html" class="current">研究概要</a>
+
+        <ul class="dropdown">
+          <li><a href="./swarm-robotics.html">群ロボット</a></li>
+          <li><a href="./body-system.html">体を動かすシステム</a></li>
+          <li><a href="./projector.html">プロジェクタ応用システム</a></li>
+          <li><a href="./education.html">教育システム</a></li>
+          <li><a href="./seminar.html">情報学演習</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="../news.html">ニュース</a>
+      </li>
+
+      <li>
+        <a href="../member.html">メンバー</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('active');
+
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+<main>
+
+ <div class="hero">
+    <!-- HERO -->
+    <div class="hero-inner">
+
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1 class="hero-title">教育<wbr>システム</h1>
+        <p class="hero-en">Education</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <img src="../img/index-research-sikaku.png" alt="視覚障がいのある児童向けプログラミング教育システムの研究">
+          <div class="gradation"></div>
+        </div>
+
+      </div>
+
+    </div>
+ </div>
+
+<section class="sec-ovv-01">
+  <div class="res-container">
+    <div class="res-ovv-des">
+      <h2 class="res-ovv-head">研究事例</h2>
+      <h3>視覚障がいをもつ児童のためのプログラミング教育システム</h3>
+    </div>
+  <p>菅原ゼミでは松本ゼミと共同で、視覚障がいのある児童のためのプログラミング教育システムを開発し、2019年度より宮城県立視覚支援学校にて授業を実施しています。</p>
+    <div><div class="ress-img-box">
+      <img class="ress-img" src="../img/index-research-sikaku.png" alt="視覚障がいをもつ児童のためのプログラミング教育システム利用の様子">
+    </div></div>
+
+    <p>
+      菅原ゼミは主に小学校低学年の児童を対象とし、以下の方針に基づいたプログラミング教育支援を行っています。
+ </p>
+ <ul>
+  <li>ビジュアルプログラミング言語に近づける　	→　実際のブロックを使ってプログラムを構成</li>
+  <li>自力でプログラムを組める環境を整える　	→　操作しやすいプログラミングツールの構築</li>
+  <li>楽しみながら学べる教材の提供　	→　ロボットを活用した教材化を積極的に推進</li>
+ </ul>
+  </div>
+
+  <div class="res-container">
+  <div class="-flexed">
+  <div class="ress-img-box">
+    <img class="ress-img" src="../img/sub/sikaku-block.png" alt="プログラミング用の自作ブロック">
+  </div>
+  <div class="ress-img-box">
+    <img class="ress-img" src="../img/sub/sikaku-souti.png" alt="ブロックに貼られたQRコードを読み込むためのボード">
+  </div>
+</div>
+ <p>
+  以前は市販のブロックを使用していましたが、現在は磁石で接続できる自作ブロックを採用しています。視覚的な確認が難しい児童でも、手触りや磁力によって配置を把握しやすくなっています。
+ </p>
+ <p>
+  児童が自力でプログラムを組めるよう、QRコードリーダをスライド操作できるボードを開発しました。以下のような工夫を取り入れています：
+- 起点ブロックで配置位置を固定
+- スライダにクリック感を持たせ、一定間隔での読み取りを支援
+- ダイヤル操作によるスライドで、直感的な操作が可能
+バージョンアップを重ねることで、Ver.2（左）からVer.6（右）へと進化し、小型化・軽量化・操作の確実性が向上しています。
+
+このような取り組みにより、視覚に制約のある児童でも、手を動かしながら楽しくプログラミングを学べる環境づくりを進めています。
+ </p>
+  </div>
+  <div class="res-container">
+  <div class="-flexed">
+  <div class="ress-img-box">
+    <img class="ress-img" src="../img/sub/sikaku-out1.png" alt="視覚障がいのある児童向けプログラミング教育で使用する教材">
+  </div>
+  <div class="ress-img-box">
+    <img class="ress-img" src="../img/sub/sikaku-out2.png" alt="視覚障がいのある児童向けプログラミング教育で使用する教材">
+  </div>
+</div>
+<p>詳しくは、以下の資料をご覧ください</p><br>
+<p><a href="https://drive.google.com/file/d/1kt9YrA8r5Po85eXiESH2ykXYkpuCwsZ9/view?usp=sharing" target="_blank">視覚支援学校におけるプログラミング教育システムの開発</a></p><br>
+<p><a href="https://drive.google.com/file/d/1h5_PFHv168YjRA41DS-WfNpsHm87yiiz/view?usp=sharing" target="_blank">動画による説明（2021年の学会発表）</a></p>
+</div>
+
+<div class="res-container">
+    <div class="res-ovv-des">
+      <h3>「間違いを正す」こと自体を学習プロセスに組み込むロボット</h3>
+    </div>
+    <div><div class="ress-img-box">
+      <img class="ress-img" src="../img/sub/matigai.png" alt="学習者の間違いに気づかせる教育支援ロボット">
+    </div></div>
+
+    <p>
+      誰かが間違ったことを言うと、「いや、それはちがうよ。〇〇だよ」とツッコミを入れたくなることがありますよね。私たちはその反応の特性を活かして、学習用ロボットを試作しました。このロボットは、教科書や教材を朗読する際に、あえて一部を読み間違えます。学習者がその誤りに気づいて訂正すると、ロボットは正しく読み直します。このやりとりを通じて、学習者の知識がより確実に定着することを狙います。
+    </p>
+    </div>
+
+
+
+
+
+</section>
+
+</main>
+
+
+<footer>
+  <p class="f-home"><a href="../index.html">菅原研究室｜東北学院大学</a></p>
+  <div class="f-grid">
+    <div class="f-index">
+      <p><a href="../index.html">トップページ</a></p>
+      <p><a href="../index.html#tag-about">About</a></p>
+      <p><a href="../index.html#tag-news">News</a></p>
+      <p><a href="../index.html#tag-research">Research</a></p>
+      <p><a href="../index.html#tag-member">Member</a></p>
+      <p><a href="../index.html#tag-contact">Contact</a></p>
+    </div>
+    <div class="f-research">
+      <p><a href="../research.html">研究概要</a></p>
+      <p><a href="./swarm-robotics.html">群ロボット</a></p>
+      <p><a href="./body-system.html">体を動かすシステム</a></p>
+      <p><a href="./projector.html">プロジェクタ応用システム</a></p>
+      <p><a href="./education.html">教育システム</a></p>
+      <p><a href="./seminar.html">情報学演習</a></p>
+    </div>
+    <div class="f-member">
+      <p><a href="../news.html">ニュース一覧</a></p>
+      <p><a href="../member.html">メンバー</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

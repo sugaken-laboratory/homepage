@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>情報学演習 | 菅原研究室 | 東北学院大学 情報学部</title>
+<link rel="stylesheet" href="../stylesheet.css">
+<link rel="stylesheet" href="../subpage-style.css">
+<link rel="stylesheet" href="./researches-style.css">
+<meta name="description" content="東北学院大学 菅原研究室の情報学演習について紹介しています。Pythonを用いたプログラミング、データ分析、プレゼンテーションなど、3年次のゼミ活動や演習内容を紹介しています。">
+</head>
+
+<body id="seminar">
+<div class="page-index">
+<header>
+  <a href="./index.html">
+    <img class="logo-min" src="../img/logo.png" alt="菅原研究室">
+  </a>
+
+  <!-- ハンバーガーボタン -->
+  <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul class="menu">
+
+      <li>
+        <a href="../index.html">ホーム</a>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="../research.html" class="current">研究概要</a>
+
+        <ul class="dropdown">
+          <li><a href="./swarm-robotics.html">群ロボット</a></li>
+          <li><a href="./body-system.html">体を動かすシステム</a></li>
+          <li><a href="./projector.html">プロジェクタ応用システム</a></li>
+          <li><a href="./education.html">教育システム</a></li>
+          <li><a href="./seminar.html">情報学演習</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="../news.html">ニュース</a>
+      </li>
+
+      <li>
+        <a href="../member.html">メンバー</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('active');
+
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+<main>
+
+ <div class="hero">
+    <!-- HERO -->
+    <div class="hero-inner">
+
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1 class="hero-title">情報学演習</h1>
+        <p class="hero-en">Programming Seminar</p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <img src="./../img/sub-swarm.png" alt="複数のロボットが協調して動く群ロボット">
+          <div class="gradation"></div>
+        </div>
+
+      </div>
+
+    </div>
+ </div>
+
+<section class="sec-ovv-01">
+  <div class="sec-container-ovv">
+    <div class="res-ovv-flexed">
+    <div class="res-ovv-des">
+      <h2 class="res-ovv-head">3年生の演習について</h2>
+      <p>
+        3年次のゼミ活動で取り上げる内容について紹介しています。<br>
+        画像やテキスト等の内容については、年度によって変更がある可能性があります。
+      </p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-ovv-02">
+  <div class="sec-container-ovv">
+
+  <div>
+  <div class="res-ovv-des">
+    <h3>（１）プログラミング</h3>
+  </div>
+    <p>
+      Pythonを用いたプログラミングを通じて、ソフトウェアとハードウェアの両面から基礎的なスキルを身につけることを目指します。視覚的な効果を重視し、Pygameを活用したインタラクティブなプログラミング演習を随時取り入れながら進めていきます。<br>
+      ＜前期＞<br>
+      ゲーム制作を中心としたプログラミング演習を行います。加えて、ワンボードマイコン（2025年度はmicro:bitを使用）によるハードウェア制御にも取り組み、Pythonを使ってセンサやLEDなどの制御を体験します。ソフトとハードの連携を通じて、より広い基礎力を養います。<br>
+      ＜後期＞<br>
+      画像処理・物体認識・姿勢推定・音声生成・音声認識など、AI・メディア技術の基礎を学びます。さらに、物理エンジンを活用したシミュレータの作成にも取り組み、仮想空間での動作やインタラクションの理解を深めます。また、簡単なロボットによるロボット制御プログラミングにも挑戦します。<br>
+    </p>
+    </div>
+
+    <div>
+
+  <div>
+  <div class="res-ovv-des">
+    <h3>（２）データ分析</h3>
+  </div>
+    <p>
+      さまざまなセンサによる計測を通して、データの取得、分析に関する基礎的な演習を行います。
+    </p>
+    </div>
+    </div>
+  <div>
+  <div class="res-ovv-des">
+    <h3>（３）プレゼンテーション</h3>
+  </div>
+    <p>
+
+プログラミング演習では、各段階で「課題」を設定し、実践的な取り組みを行います。課題には、個人で挑戦するものと、2〜3人のグループで協力して取り組むものがあり、いずれの場合も、完成した成果は全員の前でプレゼンテーションしてもらいます。また、年間に数回、ビブリオバトル（知的書評合戦）も実施しています。これらのプレゼン活動を通じて、人前で話す経験を積み、発信力やコミュニケーション力を高めることを目指します。
+
+    </p>
+    </div>
+
+    <div>
+    <div class="res-ovv-des">
+      <h3>＜参考資料＞2025演習資料から一部抜粋</h3>
+    </div>
+
+  <div class="ress-img-box">
+    <h4>姿勢推定の演習例</h4>
+    <img class="ress-img" src="../img/sub/ensyuu1.png" alt="姿勢推定を用いたプログラミング演習の例">
+  </div>
+
+  <div class="ress-img-box">
+    <h4>マイコンボードの演習例</h4>
+    <img class="ress-img" src="../img/sub/ensyuu2-1.png" alt="マイコンボードを用いたプログラミング演習の例">
+  </div>
+
+  <div class="ress-img-box">
+    <img class="ress-img" src="../img/sub/ensyuu2-2.png" alt="micro:bitと拡張基板の演習環境">
+    <p>（左）microbit、（右）microbit用拡張基板（＋ブレッドボード）</p>
+  </div>
+
+  <div class="ress-img-box">
+    <p>プログラム例１（LEDの点滅）</p>
+    <img class="ress-img" src="../img/sub/ensyuu3.png" alt="micro:bitでLEDを点滅させるプログラムの例">
+    </div>
+
+  <div class="ress-img-box">
+    <p>プログラム例２（光センサによる明るさの計測）</p>
+    <img class="ress-img" src="../img/sub/ensyuu4.png" alt="光センサで明るさを計測するプログラムの例">
+    <a href="https://note.com/shingo_shirogane/n/na00499f890e5" target="_blank">フォトリフレクタの使い方</a>
+  </div>
+
+  <div class="ress-img-box">
+    <h4>ロボット制御の例</h4>
+    <img class="ress-img" src="../img/sub/ensyuu5.png" alt="演習用ロボットを制御するプログラミングの例">
+    <p>※演習用ロボットは2026年度に全面的に改訂する見込み</p>
+  </div>
+
+  </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <p class="f-home"><a href="../index.html">菅原研究室｜東北学院大学</a></p>
+  <div class="f-grid">
+    <div class="f-index">
+      <p><a href="../index.html">トップページ</a></p>
+      <p><a href="../index.html#tag-about">About</a></p>
+      <p><a href="../index.html#tag-news">News</a></p>
+      <p><a href="../index.html#tag-research">Research</a></p>
+      <p><a href="../index.html#tag-member">Member</a></p>
+      <p><a href="../index.html#tag-contact">Contact</a></p>
+    </div>
+    <div class="f-research">
+      <p><a href="../research.html">研究概要</a></p>
+      <p><a href="./swarm-robotics.html">群ロボット</a></p>
+      <p><a href="./body-system.html">体を動かすシステム</a></p>
+      <p><a href="./projector.html">プロジェクタ応用システム</a></p>
+      <p><a href="./education.html">教育システム</a></p>
+      <p><a href="./seminar.html">情報学演習</a></p>
+    </div>
+    <div class="f-member">
+      <p><a href="../news.html">ニュース一覧</a></p>
+      <p><a href="../member.html">メンバー</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ニュース一覧｜菅原研究室｜東北学院大学 情報学部</title>
+<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="subpage-style.css">
+<meta name="description" content="東北学院大学 情報学部 菅原研究室のニュース一覧。研究活動やイベント、学会発表など、研究室に関する最新情報を掲載しています。">
+</head>
+
+<body id="news">
+<div class="page-reserches">
+<header>
+  <a href="./index.html">
+    <img class="logo-min" src="img/logo.png" alt="菅原研究室">
+  </a>
+
+  <!-- ハンバーガーボタン -->
+  <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav>
+    <ul class="menu">
+
+      <li>
+        <a href="./index.html">ホーム</a>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="./research.html">研究概要</a>
+
+        <ul class="dropdown">
+          <li><a href="./researches/swarm-robotics.html">群ロボット</a></li>
+          <li><a href="./researches/body-system.html">体を動かすシステム</a></li>
+          <li><a href="./researches/projector.html">プロジェクタ応用システム</a></li>
+          <li><a href="./researches/education.html">教育システム</a></li>
+          <li><a href="./researches/seminar.html">情報学演習</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./news.html" class="current">ニュース</a>
+      </li>
+
+      <li>
+        <a href="./member.html">メンバー</a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (!hamburger || !nav) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('active');
+
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+});
+</script>
+
+<div class="main">
+ <div class="hero">
+    <!-- HERO -->
+    <div class="hero-inner">
+
+
+      <!-- LEFT -->
+      <div class="hero-text">
+        <h1 class="hero-title">ニュース一覧</h1>
+        <p class="hero-en"></p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="hero-image-wrap">
+        <div class="hero-image">
+          <img src="./img/sub-swarm.png" alt="複数のロボットが協調して動く群ロボット">
+          <div class="gradation"></div>
+        </div>
+
+      </div>
+
+    </div>
+ </div>
+
+
+<main id="display-news">
+
+
+<script src="news.js"></script>
+
+<div id="news-list"></div>
+
+<div id="news-pagination"></div>
+
+<script>
+  const newsPerPage = 50;
+  let currentPage = 1;
+
+  // 日付の新しい順に並べる
+  const sortedNews = [...newsList].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  function displayNews(page) {
+    const container = document.getElementById("news-list");
+    const pagination = document.getElementById("news-pagination");
+
+    // ニュース一覧を空にする
+    container.innerHTML = "";
+
+    // 現在のページに表示するニュースを取得
+    const start = (page - 1) * newsPerPage;
+    const end = start + newsPerPage;
+    const pageNews = sortedNews.slice(start, end);
+
+    // ニュースを表示
+    pageNews.forEach(news => {
+      const div = document.createElement("div");
+      div.classList.add("news-list");
+
+      if (news.link) {
+        div.innerHTML = `
+          <a href="${news.link}" target="_blank" rel="noopener noreferrer" class="news-link">
+            <span class="news-date">${news.date}<br></span>
+            <span class="news-title">${news.title}</span>
+          </a>
+        `;
+      } else {
+        div.innerHTML = `
+          <span class="news-no-link">
+            <span class="news-date">${news.date}<br></span>
+            <span class="news-title">${news.title}</span>
+          </span>
+        `;
+      }
+
+      container.appendChild(div);
+    });
+
+    // ページ数
+    const totalPages = Math.ceil(sortedNews.length / newsPerPage);
+
+    pagination.innerHTML = "";
+
+    // 1ページしかない場合はページネーションを表示しない
+    if (totalPages <= 1) {
+      return;
+    }
+
+    // 「前へ」
+    if (page > 1) {
+      const prev = document.createElement("button");
+      prev.textContent = "前へ";
+      prev.addEventListener("click", () => {
+        currentPage--;
+        displayNews(currentPage);
+        window.scrollTo(0, 0);
+      });
+
+      pagination.appendChild(prev);
+    }
+
+    // ページ番号
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = document.createElement("button");
+      pageButton.textContent = i;
+
+      if (i === page) {
+        pageButton.disabled = true;
+      }
+
+      pageButton.addEventListener("click", () => {
+        currentPage = i;
+        displayNews(currentPage);
+        window.scrollTo(0, 0);
+      });
+
+      pagination.appendChild(pageButton);
+    }
+
+    // 「次へ」
+    if (page < totalPages) {
+      const next = document.createElement("button");
+      next.textContent = "次へ";
+      next.addEventListener("click", () => {
+        currentPage++;
+        displayNews(currentPage);
+        window.scrollTo(0, 0);
+      });
+
+      pagination.appendChild(next);
+    }
+  }
+
+  // 最初のページを表示
+  displayNews(currentPage);
+</script>
+</main>
+
+
+<footer>
+  <p class="f-home"><a href="./index.html">菅原研究室｜東北学院大学</a></p>
+  <div class="f-grid">
+    <div class="f-index">
+      <p><a href="./index.html">トップページ</a></p>
+      <p><a href="./index.html#tag-about">About</a></p>
+      <p><a href="./index.html#tag-news">News</a></p>
+      <p><a href="./index.html#tag-research">Research</a></p>
+      <p><a href="./index.html#tag-member">Member</a></p>
+      <p><a href="#tag-contact">Contact</a></p>
+    </div>
+    <div class="f-research">
+      <p><a href="research.html">研究概要</a></p>
+      <p><a href="researches/swarm-robotics.html">群ロボット</a></p>
+      <p><a href="researches/body-system.html">体を動かすシステム</a></p>
+      <p><a href="researches/projector.html">プロジェクタ応用システム</a></p>
+      <p><a href="researches/education.html">教育システム</a></p>
+      <p><a href="researches/seminar.html">情報学演習</a></p>
+    </div>
+    <div class="f-member">
+      <p><a href="news.html">ニュース一覧</a></p>
+      <p><a href="member.html">メンバー</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+</body>
+</html>
